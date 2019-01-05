@@ -8,6 +8,10 @@ class BooksApp extends React.Component {
     books: []
   }
 
+  componentDidMount() {
+    
+  }
+
   render() {
     return (
       <div className="app">
