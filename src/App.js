@@ -16,6 +16,9 @@ class BooksApp extends React.Component {
         })
       }
     )
+    .catch(
+      console.log('Error getting books')
+    )
   }
 
   render() {
