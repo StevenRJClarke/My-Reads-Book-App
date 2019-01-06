@@ -11,7 +11,11 @@ class Book extends React.Component {
             <ShelfChanger/>
           </div>
           <div className="book-title">{this.props.book.title}</div>
-          <div className="book-authors">Harper Lee</div>
+          <div className="book-authors">{
+            this.props.book.authors.reduce((acc, curr) =>
+              (acc + ', ' + curr)
+            )
+          }</div>
         </div>
       </li>
     )
