@@ -6,6 +6,12 @@ class Book extends React.Component {
     shelf: ''
   }
 
+  componentDidMount() {
+    this.setState({
+      shelf: this.props.book.shelf
+    })
+  }
+
   changeShelf(shelf) {
     this.setState({
       shelf: shelf
