@@ -1,6 +1,10 @@
 import React from 'react'
 
 class ShelfChanger extends React.Component {
+  state = {
+    value: ''
+  }
+
   render() {
     return (
       <div className="book-shelf-changer">
