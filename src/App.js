@@ -72,7 +72,7 @@ class BooksApp extends React.Component {
                           this.state.books
                           .filter( (book) => book.shelf === 'currentlyReading' )
                           .map( (book) => (
-                            <Book book={book}/>
+                            <Book book={book} key={book.id}/>
                           ))
                         }
                       </ol>

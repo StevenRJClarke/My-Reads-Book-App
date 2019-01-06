@@ -4,7 +4,7 @@ import ShelfChanger from './ShelfChanger'
 class Book extends React.Component {
   render() {
     return (
-      <li key={this.props.book.id}>
+      <li>
         <div className="book">
           <div className="book-top">
             <img className="book-cover" style={{ width: 128, height: 193}} src={this.props.book.imageLinks.thumbnail} alt={this.props.book.title}/>
