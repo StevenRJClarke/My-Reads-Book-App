@@ -96,7 +96,13 @@ class BooksApp extends React.Component {
                     <h2 className="bookshelf-title">Read</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-
+                      {
+                        this.state.books
+                        .filter( (book) => book.shelf === 'read' )
+                        .map( (book) => (
+                          <Book book={book} key={book.id}/>
+                        ))
+                      }
                       </ol>
                     </div>
                   </div>
