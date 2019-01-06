@@ -6,6 +6,10 @@ class Book extends React.Component {
     shelf: ''
   }
 
+  changeShelf() {
+
+  }
+
   render() {
     return (
       <li>
