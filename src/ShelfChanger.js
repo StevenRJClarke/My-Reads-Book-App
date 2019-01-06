@@ -5,6 +5,12 @@ class ShelfChanger extends React.Component {
     value: ''
   }
 
+  componentDidMount() {
+    this.setState({
+      value: this.props.shelf
+    })
+  }
+
   render() {
     return (
       <div className="book-shelf-changer">
