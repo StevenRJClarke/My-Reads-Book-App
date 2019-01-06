@@ -82,7 +82,13 @@ class BooksApp extends React.Component {
                     <h2 className="bookshelf-title">Want to Read</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-
+                      {
+                        this.state.books
+                        .filter( (book) => book.shelf === 'wantToRead' )
+                        .map( (book) => (
+                          <Book book={book} key={book.id}/>
+                        ))
+                      }
                       </ol>
                     </div>
                   </div>
