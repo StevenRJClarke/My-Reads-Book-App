@@ -6,8 +6,10 @@ class Book extends React.Component {
     shelf: ''
   }
 
-  changeShelf() {
-
+  changeShelf(shelf) {
+    this.setState({
+      shelf: shelf
+    })
   }
 
   render() {
