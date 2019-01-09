@@ -89,6 +89,7 @@ class BooksApp extends React.Component {
                             <Book
                               book={book}
                               key={book.id}
+                              changeBookShelf={this.changeBookShelf}
                             />
                           ))
                         }
@@ -106,6 +107,7 @@ class BooksApp extends React.Component {
                           <Book
                             book={book}
                             key={book.id}
+                            changeBookShelf={this.changeBookShelf}
                           />
                         ))
                       }
@@ -123,6 +125,7 @@ class BooksApp extends React.Component {
                           <Book
                             book={book}
                             key={book.id}
+                            changeBookShelf={this.changeBookShelf}
                           />
                         ))
                       }
