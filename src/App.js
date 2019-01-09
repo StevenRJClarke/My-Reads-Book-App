@@ -22,6 +22,20 @@ class BooksApp extends React.Component {
     )
   }
 
+  changeBookShelf = (thisBook, newShelf) => {
+    this.setState((state) => ({
+      books: state.books.map(
+        function(book) {
+          if(book.id === thisBook.id) {
+            book.shelf = newShelf
+            return book
+          } else {
+            return book
+          }
+        })
+    }))
+  }
+
   render() {
     return (
       <div className="app">
