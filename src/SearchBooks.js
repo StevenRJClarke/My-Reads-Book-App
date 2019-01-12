@@ -70,7 +70,17 @@ class SearchBooks extends React.Component {
           </div>
         </div>
         <div className="search-books-results">
-          <ol className="books-grid"></ol>
+          <ol className="books-grid">
+            {
+              (this.state.searchError) && (
+                <div className="search-books-error">
+                  <h3>Cannot find any books that match this search</h3>
+
+                  <p>Please try another search</p>
+                </div>
+              )
+            }
+          </ol>
         </div>
       </div>
     )
