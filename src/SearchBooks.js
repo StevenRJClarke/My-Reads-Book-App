@@ -34,6 +34,7 @@ class SearchBooks extends React.Component {
             <input
               type="text"
               placeholder="Search by title or author"
+              onChange={ (event) => this.updateQuery(event.target.value) }
             />
 
           </div>
