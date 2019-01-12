@@ -20,11 +20,13 @@ class SearchBooks extends React.Component {
       BooksAPI.search(query.trim()).then( (foundBooks) => {
           if(!foundBooks.hasOwnProperty('error')) {
             this.setState({
-              searchedBooks: foundBooks
+              searchedBooks: foundBooks,
+              searchError: false
             })
           } else {
             this.setState({
-              searchedBooks: []
+              searchedBooks: [],
+              searchError: true
             })
           }
         }
