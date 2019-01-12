@@ -16,8 +16,10 @@ class SearchBooks extends React.Component {
 
   searchBooks = (query) => {
     if(query.trim()) {
-      BooksAPI.search(query.trim()).then(
-
+      BooksAPI.search(query.trim()).then( (foundBooks) => {
+          if(!foundBooks.hasOwnProperty('error'))
+            console.log(foundBooks)
+        }
       )
       .catch(
         console.log('Error in searching for books')
