@@ -90,6 +90,7 @@ class SearchBooks extends React.Component {
                   <Book
                     book={book}
                     key={book.id}
+                    changeBookShelf={this.props.changeBookShelf}
                   />
                 ))
               )
