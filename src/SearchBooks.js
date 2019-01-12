@@ -86,7 +86,12 @@ class SearchBooks extends React.Component {
                   <p>Please try another search</p>
                 </div>
               ) : (
-                <p>Books</p>
+                this.state.searchedBooks.map( (book) => (
+                  <Book
+                    book={book}
+                    key={book.id}
+                  />
+                ))
               )
 
             }
