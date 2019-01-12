@@ -26,7 +26,12 @@ class Book extends React.Component {
       <li>
         <div className="book">
           <div className="book-top">
-            <img className="book-cover" style={{ width: 128, height: 193}} src={this.props.book.imageLinks.thumbnail} alt={this.props.book.title}/>
+            <img
+              className="book-cover"
+              style={{ width: 128, height: 193}}
+              src={this.props.book.imageLinks.thumbnail}
+              alt={this.props.book.title}
+            />
             <ShelfChanger
               shelf={this.props.book.shelf}
               changeShelf={this.changeShelf}
