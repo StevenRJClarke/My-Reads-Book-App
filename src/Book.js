@@ -29,7 +29,11 @@ class Book extends React.Component {
             <img
               className="book-cover"
               style={{ width: 128, height: 193}}
-              src={this.props.book.imageLinks.thumbnail}
+              src={
+                this.props.book.imageLinks.thumbnail
+                ? this.props.book.imageLinks.thumbnail
+                : 'http://via.placeholder.com/128x193?text=?'
+              }
               alt={this.props.book.title}
             />
             <ShelfChanger
