@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 class SearchBooks extends React.Component {
+  state = {
+    query: ''
+  }
+
   render() {
     return (
       <div className="search-books">
