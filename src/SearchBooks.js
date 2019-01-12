@@ -35,6 +35,10 @@ class SearchBooks extends React.Component {
       .catch(
         console.log('Error in searching for books')
       )
+    } else {
+      this.setState({
+        searchedBooks: []
+      })
     }
   }
 
