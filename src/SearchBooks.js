@@ -73,13 +73,18 @@ class SearchBooks extends React.Component {
         <div className="search-books-results">
           <ol className="books-grid">
             {
-              (this.state.searchError) && (
+              (
+                this.state.searchError
+              ) ? (
                 <div className="search-books-error">
                   <h3>Cannot find any books that match this search</h3>
 
                   <p>Please try another search</p>
                 </div>
+              ) : (
+                <p>Books</p>
               )
+
             }
           </ol>
         </div>
