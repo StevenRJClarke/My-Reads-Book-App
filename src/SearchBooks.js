@@ -5,7 +5,8 @@ import * as BooksAPI from './BooksAPI'
 class SearchBooks extends React.Component {
   state = {
     query: '',
-    searchedBooks: []
+    searchedBooks: [],
+    searchError: false
   }
 
   updateQuery = (newQuery) => {
