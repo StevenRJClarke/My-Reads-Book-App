@@ -13,6 +13,8 @@ class SearchBooks extends React.Component {
     })
   }
 
+  searchBooks = () => {}
+
   render() {
     return (
       <div className="search-books">
