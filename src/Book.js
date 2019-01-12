@@ -43,9 +43,11 @@ class Book extends React.Component {
               : 'No title'
           }</div>
           <div className="book-authors">{
-            this.props.book.authors.reduce((acc, curr) =>
-              (acc + ', ' + curr)
-            )
+            this.props.book.authors
+              ? this.props.book.authors.reduce((acc, curr) =>
+                  (acc + ', ' + curr)
+                )
+              : ['Author unknown']
           }</div>
         </div>
       </li>
