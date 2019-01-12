@@ -15,12 +15,14 @@ class SearchBooks extends React.Component {
   }
 
   searchBooks = (query) => {
-    BooksAPI.search(query.trim()).then(
+    if(query.trim()) {
+      BooksAPI.search(query.trim()).then(
 
-    )
-    .catch(
-      console.log('Error in searching for books')
-    )
+      )
+      .catch(
+        console.log('Error in searching for books')
+      )
+    }
   }
 
   render() {
