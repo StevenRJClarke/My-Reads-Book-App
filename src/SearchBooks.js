@@ -6,6 +6,12 @@ class SearchBooks extends React.Component {
     query: ''
   }
 
+  updateQuery = (newQuery) => {
+    this.setState({
+      query: newQuery.trim()
+    })
+  }
+
   render() {
     return (
       <div className="search-books">
