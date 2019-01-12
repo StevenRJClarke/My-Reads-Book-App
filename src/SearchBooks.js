@@ -17,10 +17,15 @@ class SearchBooks extends React.Component {
   searchBooks = (query) => {
     if(query.trim()) {
       BooksAPI.search(query.trim()).then( (foundBooks) => {
-          if(!foundBooks.hasOwnProperty('error'))
+          if(!foundBooks.hasOwnProperty('error')) {
             this.setState({
               searchedBooks: foundBooks
             })
+          } else {
+            this.setState({
+              searchedBooks: []
+            })
+          }
         }
       )
       .catch(
