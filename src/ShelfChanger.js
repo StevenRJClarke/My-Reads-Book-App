@@ -52,4 +52,10 @@ class ShelfChanger extends React.Component {
   }
 }
 
+ShelfChanger.propTypes = {
+  shelf: PropTypes.string,
+  addBook: PropTypes.func.isRequired,
+  changeShelf: PropTypes.func.isRequired
+}
+
 export default ShelfChanger
