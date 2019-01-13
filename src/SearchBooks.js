@@ -5,26 +5,35 @@ import Book from './Book'
 
 class SearchBooks extends React.Component {
   state = {
+    // States stored:
+    // * query in search input
+    // * books returned by search from Server
+    // * error flag if no books found that match search
     query: '',
     searchedBooks: [],
     searchError: false
   }
 
+  // Change query state when user changes search input
   updateQuery = (newQuery) => {
     this.setState({
       query: newQuery.trim()
     })
   }
 
+  // Use search input to search for books on server and return the book objects
   searchBooks = (query) => {
     if(query.trim()) {
       BooksAPI.search(query.trim()).then( (foundBooks) => {
           if(!foundBooks.hasOwnProperty('error')) {
+            // If books found, store book objects in state
             this.setState({
               searchedBooks: foundBooks,
               searchError: false
             })
-          } else {
+          }
+          // If no books found, no books are stored or shown
+          else {
             this.setState({
               searchedBooks: [],
               searchError: true
@@ -35,7 +44,9 @@ class SearchBooks extends React.Component {
       .catch(
         console.log('Error in searching for books')
       )
-    } else {
+    }
+    // If search query is empty, no books are stored or shown
+    else {
       this.setState({
         searchedBooks: []
       })
@@ -46,6 +57,7 @@ class SearchBooks extends React.Component {
     return (
       <div className="search-books">
         <div className="search-books-bar">
+          {/* Link to book shelf page, changing the url */}
           <Link
             to='/'
             className="close-search"
@@ -61,6 +73,7 @@ class SearchBooks extends React.Component {
               However, remember that the BooksAPI.search method DOES search by title or author. So, don't worry if
               you don't find a specific author or title. Every search is limited by search terms.
             */}
+            {/* Search form will update query state and search for books */}
             <input
               type="text"
               placeholder="Search by title or author"
@@ -76,6 +89,10 @@ class SearchBooks extends React.Component {
         </div>
         <div className="search-books-results">
           <ol className="books-grid">
+            {/* Check if books are found by search
+                * If no, display error message
+                * If yes, display books
+              */}
             {
               (
                 this.state.searchError
@@ -95,7 +112,6 @@ class SearchBooks extends React.Component {
                   />
                 ))
               )
-
             }
           </ol>
         </div>
