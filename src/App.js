@@ -23,7 +23,7 @@ class BooksApp extends React.Component {
     )
   }
 
-  addBook = () => {}
+  addBookToShelves = () => {}
 
   changeBookShelf = (thisBook, newShelf) => {
     this.setState((state) => ({
@@ -48,7 +48,7 @@ class BooksApp extends React.Component {
           path='/search'
           render={() => (
             <SearchBooks
-              addBook={this.addBook}
+              addBook={this.addBookToShelves}
               changeBookShelf={this.changeBookShelf}
             />
           )}
@@ -73,7 +73,7 @@ class BooksApp extends React.Component {
                             <Book
                               book={book}
                               key={book.id}
-                              addBook={this.addBook}
+                              addBook={this.addBookToShelves}
                               changeBookShelf={this.changeBookShelf}
                             />
                           ))
@@ -92,7 +92,7 @@ class BooksApp extends React.Component {
                           <Book
                             book={book}
                             key={book.id}
-                            addBook={this.addBook}
+                            addBook={this.addBookToShelves}
                             changeBookShelf={this.changeBookShelf}
                           />
                         ))
@@ -111,7 +111,7 @@ class BooksApp extends React.Component {
                           <Book
                             book={book}
                             key={book.id}
-                            addBook={this.addBook}
+                            addBook={this.addBookToShelves}
                             changeBookShelf={this.changeBookShelf}
                           />
                         ))
