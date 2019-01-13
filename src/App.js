@@ -60,6 +60,7 @@ class BooksApp extends React.Component {
         })
     }))
 
+    // Update shelf on books object on server
     BooksAPI.update(thisBook, newShelf)
   }
 
