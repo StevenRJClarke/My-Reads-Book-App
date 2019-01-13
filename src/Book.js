@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ShelfChanger from './ShelfChanger'
 
 class Book extends React.Component {
