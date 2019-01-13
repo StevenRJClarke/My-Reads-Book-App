@@ -121,4 +121,9 @@ class SearchBooks extends React.Component {
   }
 }
 
+SearchBooks.propTypes = {
+  addBookToShelves: PropTypes.func.isRequired,
+  changeBookShelf: PropTypes.func.isRequired
+}
+
 export default SearchBooks
