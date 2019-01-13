@@ -23,7 +23,24 @@ class BooksApp extends React.Component {
     )
   }
 
-  addBookToShelves = () => {}
+  addBookToShelves = (thisBook, shelf) => {
+    //Add shelf property to book
+    thisBook.shelf = shelf
+
+    //Check to see if chosen book is already in books state
+    let duplicate = 0
+
+    this.state.books.forEach(
+      function(book) {
+        if(book.id === thisBook.id)
+          duplicate++
+      }
+    )
+
+    //If book is not in books state, push it to books statements
+    if(!duplicate)
+      this.state.books.push(thisBook)
+  }
 
   changeBookShelf = (thisBook, newShelf) => {
     this.setState((state) => ({
