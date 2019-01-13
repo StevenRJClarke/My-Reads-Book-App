@@ -38,7 +38,6 @@ class Book extends React.Component {
             />
             <ShelfChanger
               shelf={this.props.book.shelf}
-              addBook={this.props.addBook}
               changeShelf={this.changeShelf}
             />
           </div>
