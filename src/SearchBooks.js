@@ -90,7 +90,7 @@ class SearchBooks extends React.Component {
                   <Book
                     book={book}
                     key={book.id}
-                    addBook={this.props.addBook}
+                    addBookToShelves={this.props.addBookToShelves}
                     changeBookShelf={this.props.changeBookShelf}
                   />
                 ))
