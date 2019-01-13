@@ -12,7 +12,9 @@ class Book extends React.Component {
     })
   }
 
-  addBook = () => {}
+  addBook = (shelf) => {
+    this.props.addBookToShelves(this.props.book, shelf)
+  }
 
   changeShelf = (shelf) => {
     this.setState((state) => ({
