@@ -6,9 +6,11 @@ class ShelfChanger extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({
-      value: this.props.shelf
-    })
+    if(!this.state.value) {
+      this.setState({
+        value: this.props.shelf
+      })
+    }
   }
 
   changeValue = (newValue) => {
