@@ -48,7 +48,7 @@ class BooksApp extends React.Component {
           path='/search'
           render={() => (
             <SearchBooks
-              addBook={this.addBookToShelves}
+              addBookToShelves={this.addBookToShelves}
               changeBookShelf={this.changeBookShelf}
             />
           )}
@@ -73,7 +73,7 @@ class BooksApp extends React.Component {
                             <Book
                               book={book}
                               key={book.id}
-                              addBook={this.addBookToShelves}
+                              addBookToShelves={this.addBookToShelves}
                               changeBookShelf={this.changeBookShelf}
                             />
                           ))
@@ -92,7 +92,7 @@ class BooksApp extends React.Component {
                           <Book
                             book={book}
                             key={book.id}
-                            addBook={this.addBookToShelves}
+                            addBookToShelves={this.addBookToShelves}
                             changeBookShelf={this.changeBookShelf}
                           />
                         ))
@@ -111,7 +111,7 @@ class BooksApp extends React.Component {
                           <Book
                             book={book}
                             key={book.id}
-                            addBook={this.addBookToShelves}
+                            addBookToShelves={this.addBookToShelves}
                             changeBookShelf={this.changeBookShelf}
                           />
                         ))
