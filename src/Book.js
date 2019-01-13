@@ -12,6 +12,8 @@ class Book extends React.Component {
     })
   }
 
+  addBook = () => {}
+
   changeShelf = (shelf) => {
     this.setState((state) => ({
       shelf: shelf
