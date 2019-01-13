@@ -23,7 +23,10 @@ class ShelfChanger extends React.Component {
         <select
           value={this.state.value}
           onChange={
-            (event) => this.props.changeShelf(event.target.value)
+            (event) => {
+              this.changeValue(event.target.value)
+              this.props.changeShelf(event.target.value)
+            }
           }
         >
           <option value="move" disabled>Move to...</option>
