@@ -27,6 +27,7 @@ class ShelfChanger extends React.Component {
           onChange={
             (event) => {
               this.changeValue(event.target.value)
+              this.props.addBook(event.target.value)
               this.props.changeShelf(event.target.value)
             }
           }
