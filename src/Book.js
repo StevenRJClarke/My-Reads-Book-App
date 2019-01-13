@@ -84,4 +84,11 @@ class Book extends React.Component {
   }
 }
 
+Book.propTypes = {
+  book: PropTypes.object.isRequired,
+  key: PropTypes.string.isRequired,
+  addBookToShelves: PropTypes.func.isRequired,
+  changeBookShelf: PropTypes.func.isRequired
+}
+
 export default Book
