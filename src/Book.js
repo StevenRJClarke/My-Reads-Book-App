@@ -13,7 +13,7 @@ class Book extends React.Component {
   }
 
   changeShelf = (shelf) => {
-    this.setState((shelf) => ({
+    this.setState((state) => ({
       shelf: shelf
     }))
 
