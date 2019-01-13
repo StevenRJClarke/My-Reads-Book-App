@@ -2,10 +2,13 @@ import React from 'react'
 
 class ShelfChanger extends React.Component {
   state = {
+    // Store value in state. Initialize to disabled 'move'
     value: 'move'
   }
 
   componentDidMount() {
+    // For books fetched by BooksAPI, set value using shelf property
+    // of book object
     if(this.state.value === 'move') {
       this.setState({
         value: this.props.shelf
@@ -13,6 +16,7 @@ class ShelfChanger extends React.Component {
     }
   }
 
+  // Change value state according to user input
   changeValue = (newValue) => {
     this.setState({
       value: newValue
@@ -22,6 +26,10 @@ class ShelfChanger extends React.Component {
   render() {
     return (
       <div className="book-shelf-changer">
+        {/* Form value set by state.
+            Changes to shelf will add book to App.js books state (if not there already)
+            and will change shelf otherwise in both <Book/> and App.js books state and server
+          */}
         <select
           value={this.state.value}
           onChange={
