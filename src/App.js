@@ -23,6 +23,8 @@ class BooksApp extends React.Component {
     )
   }
 
+  addBook = () => {}
+
   changeBookShelf = (thisBook, newShelf) => {
     this.setState((state) => ({
       books: state.books.map(
