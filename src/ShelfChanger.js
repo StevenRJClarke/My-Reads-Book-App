@@ -2,11 +2,11 @@ import React from 'react'
 
 class ShelfChanger extends React.Component {
   state = {
-    value: ''
+    value: 'move'
   }
 
   componentDidMount() {
-    if(!this.state.value) {
+    if(this.state.value === 'move') {
       this.setState({
         value: this.props.shelf
       })
