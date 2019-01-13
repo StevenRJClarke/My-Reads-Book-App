@@ -11,6 +11,12 @@ class ShelfChanger extends React.Component {
     })
   }
 
+  changeValue = (newValue) => {
+    this.setState({
+      value: newValue
+    })
+  }
+
   render() {
     return (
       <div className="book-shelf-changer">
