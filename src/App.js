@@ -7,10 +7,13 @@ import './App.css'
 
 class BooksApp extends React.Component {
   state = {
+    // Store book objects in state
     books: []
   }
 
   componentDidMount() {
+    // When component first mounted, set books from server and add
+    // to books state
     BooksAPI.getAll().then(
       (fetchedBooks) => {
         this.setState({
@@ -23,6 +26,7 @@ class BooksApp extends React.Component {
     )
   }
 
+  // Adds searched books to books state when shelf is selected
   addBookToShelves = (thisBook, shelf) => {
     //Add shelf property to book
     thisBook.shelf = shelf
@@ -42,6 +46,7 @@ class BooksApp extends React.Component {
       this.state.books.push(thisBook)
   }
 
+  // Changes book's shelf on server
   changeBookShelf = (thisBook, newShelf) => {
     this.setState((state) => ({
       books: state.books.map(
@@ -61,6 +66,7 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
+        {/* If url is /search, render search page*/}
         <Route
           path='/search'
           render={() => (
@@ -70,6 +76,7 @@ class BooksApp extends React.Component {
             />
           )}
         />
+        {/* If url is /, render book shelves page  */}
         <Route
           exact path='/'
           render={() => (
@@ -83,6 +90,7 @@ class BooksApp extends React.Component {
                     <h2 className="bookshelf-title">Currently Reading</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
+                        {/* If shelf is Currently Reading, render the book here */}
                         {
                           this.state.books
                           .filter( (book) => book.shelf === 'currentlyReading' )
@@ -102,6 +110,7 @@ class BooksApp extends React.Component {
                     <h2 className="bookshelf-title">Want to Read</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
+                      {/* If shelf is Want to Read, render the book here */}
                       {
                         this.state.books
                         .filter( (book) => book.shelf === 'wantToRead' )
@@ -121,6 +130,7 @@ class BooksApp extends React.Component {
                     <h2 className="bookshelf-title">Read</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
+                      {/* If shelf is Read, render the book here */}
                       {
                         this.state.books
                         .filter( (book) => book.shelf === 'read' )
@@ -138,6 +148,7 @@ class BooksApp extends React.Component {
                   </div>
                 </div>
               </div>
+              {/* Link to search page, changing the url */}
               <Link
                 to='/search'
                 className="open-search"
