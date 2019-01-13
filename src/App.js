@@ -67,7 +67,9 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
-        {/* If url is /search, render search page*/}
+        {/* If url is /search, render search page.
+            Search page contained in <SearchBooks/> component
+          */}
         <Route
           path='/search'
           render={() => (
@@ -77,7 +79,7 @@ class BooksApp extends React.Component {
             />
           )}
         />
-        {/* If url is /, render book shelves page  */}
+        {/* If url is /, render book shelves page */}
         <Route
           exact path='/'
           render={() => (
@@ -91,7 +93,9 @@ class BooksApp extends React.Component {
                     <h2 className="bookshelf-title">Currently Reading</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-                        {/* If shelf is Currently Reading, render the book here */}
+                        {/* If shelf is Currently Reading, render the book here
+                            using <Book/> component
+                          */}
                         {
                           this.state.books
                           .filter( (book) => book.shelf === 'currentlyReading' )
@@ -111,7 +115,9 @@ class BooksApp extends React.Component {
                     <h2 className="bookshelf-title">Want to Read</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-                      {/* If shelf is Want to Read, render the book here */}
+                      {/* If shelf is Want to Read, render the book here
+                          using <Book/> component
+                        */}
                       {
                         this.state.books
                         .filter( (book) => book.shelf === 'wantToRead' )
@@ -131,7 +137,9 @@ class BooksApp extends React.Component {
                     <h2 className="bookshelf-title">Read</h2>
                     <div className="bookshelf-books">
                       <ol className="books-grid">
-                      {/* If shelf is Read, render the book here */}
+                      {/* If shelf is Read, render the book here
+                          using <Book/> component
+                        */}
                       {
                         this.state.books
                         .filter( (book) => book.shelf === 'read' )
