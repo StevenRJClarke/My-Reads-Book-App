@@ -41,7 +41,7 @@ class Book extends React.Component {
             />
             {/* Form to select book shelf in <ShelfChanger/> component */}
             <ShelfChanger
-              shelf={this.props.book.shelf}
+              shelf={this.props.shelf}
               addBook={this.addBook}
               changeShelf={this.changeShelf}
             />
