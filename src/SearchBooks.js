@@ -28,6 +28,10 @@ class SearchBooks extends React.Component {
     // will the conditional be truthy
     if(query.trim()) {
       BooksAPI.search(query.trim()).then( (foundBooks) => {
+
+          // Books returned by search must have same shelf as those on main page
+          foundBooks = this.matchShelf(foundBooks)
+
           if(!foundBooks.hasOwnProperty('error')) {
             // If books found, store book objects in state
             this.setState({
@@ -54,6 +58,12 @@ class SearchBooks extends React.Component {
         searchedBooks: []
       })
     }
+  }
+
+  // Check if any of the books returned by the search are already on the book
+  // shelves. Ensure they have same shelf
+  matchShelf(fetchedBooks) {
+
   }
 
   render() {
