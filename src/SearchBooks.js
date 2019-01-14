@@ -24,6 +24,8 @@ class SearchBooks extends React.Component {
 
   // Use search input to search for books on server and return the book objects
   searchBooks = (query) => {
+    // Only if query is not an empty String or null or undefined
+    // will the conditional be truthy
     if(query.trim()) {
       BooksAPI.search(query.trim()).then( (foundBooks) => {
           if(!foundBooks.hasOwnProperty('error')) {
