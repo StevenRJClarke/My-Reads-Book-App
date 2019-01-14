@@ -3,18 +3,16 @@ import PropTypes from 'prop-types'
 
 class ShelfChanger extends React.Component {
   state = {
-    // Store value in state. Initialize to disabled 'move'
-    value: 'none'
+    // Store value in state
+    value: ''
   }
 
   componentDidMount() {
     // For books fetched by BooksAPI, set value using shelf property
     // of book object
-    if(this.state.value === 'none') {
-      this.setState({
-        value: this.props.shelf
-      })
-    }
+    this.setState({
+      value: this.props.shelf
+    })
   }
 
   // Change value state according to user input
