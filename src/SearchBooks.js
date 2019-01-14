@@ -63,7 +63,7 @@ class SearchBooks extends React.Component {
   // Check if any of the books returned by the search are already on the book
   // shelves. Ensure they have same shelf
   matchShelf(foundBooks) {
-
+    return foundBooks
   }
 
   render() {
