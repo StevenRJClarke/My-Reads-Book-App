@@ -13,7 +13,7 @@ class BookShelf extends React.Component {
               */}
             {
               this.props.books
-              .filter( (book) => book.shelf === 'currentlyReading' )
+              .filter( (book) => book.shelf === this.props.shelf )
               .map( (book) => (
                 <Book
                   book={book}
