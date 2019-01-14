@@ -19,7 +19,7 @@ class BookShelf extends React.Component {
                   book={book}
                   key={book.id}
                   addBookToShelves={this.props.addBookToShelves}
-                  changeBookShelf={this.changeBookShelf}
+                  changeBookShelf={this.props.changeBookShelf}
                 />
               ))
             }
