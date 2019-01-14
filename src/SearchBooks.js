@@ -141,6 +141,7 @@ class SearchBooks extends React.Component {
                   <Book
                     book={book}
                     key={book.id}
+                    shelf={book.shelf}
                     addBookToShelves={this.props.addBookToShelves}
                     changeBookShelf={this.props.changeBookShelf}
                   />
