@@ -89,72 +89,9 @@ class BooksApp extends React.Component {
               </div>
               <div className="list-books-content">
                 <div>
-                  <div className="bookshelf">
-                    <h2 className="bookshelf-title">Currently Reading</h2>
-                    <div className="bookshelf-books">
-                      <ol className="books-grid">
-                        {/* If shelf is Currently Reading, render the book here
-                            using <Book/> component
-                          */}
-                        {
-                          this.state.books
-                          .filter( (book) => book.shelf === 'currentlyReading' )
-                          .map( (book) => (
-                            <Book
-                              book={book}
-                              key={book.id}
-                              addBookToShelves={this.addBookToShelves}
-                              changeBookShelf={this.changeBookShelf}
-                            />
-                          ))
-                        }
-                      </ol>
-                    </div>
-                  </div>
-                  <div className="bookshelf">
-                    <h2 className="bookshelf-title">Want to Read</h2>
-                    <div className="bookshelf-books">
-                      <ol className="books-grid">
-                      {/* If shelf is Want to Read, render the book here
-                          using <Book/> component
-                        */}
-                      {
-                        this.state.books
-                        .filter( (book) => book.shelf === 'wantToRead' )
-                        .map( (book) => (
-                          <Book
-                            book={book}
-                            key={book.id}
-                            addBookToShelves={this.addBookToShelves}
-                            changeBookShelf={this.changeBookShelf}
-                          />
-                        ))
-                      }
-                      </ol>
-                    </div>
-                  </div>
-                  <div className="bookshelf">
-                    <h2 className="bookshelf-title">Read</h2>
-                    <div className="bookshelf-books">
-                      <ol className="books-grid">
-                      {/* If shelf is Read, render the book here
-                          using <Book/> component
-                        */}
-                      {
-                        this.state.books
-                        .filter( (book) => book.shelf === 'read' )
-                        .map( (book) => (
-                          <Book
-                            book={book}
-                            key={book.id}
-                            addBookToShelves={this.addBookToShelves}
-                            changeBookShelf={this.changeBookShelf}
-                          />
-                        ))
-                      }
-                      </ol>
-                    </div>
-                  </div>
+                  <BookShelf/>
+                  <BookShelf/>
+                  <BookShelf/>
                 </div>
               </div>
               {/* Link to search page, changing the url */}
