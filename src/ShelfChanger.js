@@ -4,13 +4,13 @@ import PropTypes from 'prop-types'
 class ShelfChanger extends React.Component {
   state = {
     // Store value in state. Initialize to disabled 'move'
-    value: 'move'
+    value: 'none'
   }
 
   componentDidMount() {
     // For books fetched by BooksAPI, set value using shelf property
     // of book object
-    if(this.state.value === 'move') {
+    if(this.state.value === 'none') {
       this.setState({
         value: this.props.shelf
       })
