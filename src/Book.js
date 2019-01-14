@@ -74,6 +74,7 @@ class Book extends React.Component {
 
 Book.propTypes = {
   book: PropTypes.object.isRequired,
+  shelf: PropTypes.string,
   addBookToShelves: PropTypes.func.isRequired,
   changeBookShelf: PropTypes.func.isRequired
 }
