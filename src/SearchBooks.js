@@ -82,6 +82,10 @@ class SearchBooks extends React.Component {
       }
     })
 
+    this.setState({
+      shelvesDefined: true
+    })
+
     return foundBooks
   }
 
