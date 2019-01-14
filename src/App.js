@@ -89,9 +89,15 @@ class BooksApp extends React.Component {
               </div>
               <div className="list-books-content">
                 <div>
-                  <BookShelf/>
-                  <BookShelf/>
-                  <BookShelf/>
+                  <BookShelf
+                    addBookToShelves={this.addBookToShelves}
+                  />
+                  <BookShelf
+                    addBookToShelves={this.addBookToShelves}
+                  />
+                  <BookShelf
+                    addBookToShelves={this.addBookToShelves}
+                  />
                 </div>
               </div>
               {/* Link to search page, changing the url */}
