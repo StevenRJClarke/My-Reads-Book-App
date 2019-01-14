@@ -91,12 +91,15 @@ class BooksApp extends React.Component {
                 <div>
                   <BookShelf
                     addBookToShelves={this.addBookToShelves}
+                    changeBookShelf={this.changeBookShelf}
                   />
                   <BookShelf
                     addBookToShelves={this.addBookToShelves}
+                    changeBookShelf={this.changeBookShelf}
                   />
                   <BookShelf
                     addBookToShelves={this.addBookToShelves}
+                    changeBookShelf={this.changeBookShelf}
                   />
                 </div>
               </div>
