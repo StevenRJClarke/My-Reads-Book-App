@@ -7,14 +7,6 @@ class ShelfChanger extends React.Component {
     value: ''
   }
 
-  componentDidMount() {
-    // For books fetched by BooksAPI, set value using shelf property
-    // of book object
-    this.setState({
-      value: this.props.shelf
-    })
-  }
-
   // Change value state according to user input
   changeValue = (newValue) => {
     this.setState({
