@@ -89,21 +89,16 @@ class BooksApp extends React.Component {
               </div>
               <div className="list-books-content">
                 <div>
-                  <BookShelf
-                    books = {this.state.books}
-                    addBookToShelves={this.addBookToShelves}
-                    changeBookShelf={this.changeBookShelf}
-                  />
-                  <BookShelf
-                    books = {this.state.books}
-                    addBookToShelves={this.addBookToShelves}
-                    changeBookShelf={this.changeBookShelf}
-                  />
-                  <BookShelf
-                    books = {this.state.books}
-                    addBookToShelves={this.addBookToShelves}
-                    changeBookShelf={this.changeBookShelf}
-                  />
+                  {
+                    ['currentlyReading', 'wantToRead', 'read'].map( (shelf) => (
+                      <BookShelf
+                        books = {this.state.books}
+                        shelf={shelf}
+                        addBookToShelves={this.addBookToShelves}
+                        changeBookShelf={this.changeBookShelf}
+                      />
+                    ))
+                  }
                 </div>
               </div>
               {/* Link to search page, changing the url */}
