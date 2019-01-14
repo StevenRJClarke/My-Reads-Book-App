@@ -3,18 +3,6 @@ import PropTypes from 'prop-types'
 import ShelfChanger from './ShelfChanger'
 
 class Book extends React.Component {
-  state = {
-    // Store shelf in state
-    shelf: ''
-  }
-
-  componentDidMount() {
-    this.setState({
-      // Set shelf state from props
-      shelf: this.props.book.shelf
-    })
-  }
-
   // Passes book and shelf to App.js so can be added to books state
   // if book does not exist there already
   addBook = (shelf) => {
