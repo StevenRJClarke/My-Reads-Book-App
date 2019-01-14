@@ -93,6 +93,7 @@ class BooksApp extends React.Component {
                     ['currentlyReading', 'wantToRead', 'read'].map( (shelf) => (
                       <BookShelf
                         books = {this.state.books}
+                        key={shelf}
                         shelf={shelf}
                         addBookToShelves={this.addBookToShelves}
                         changeBookShelf={this.changeBookShelf}
