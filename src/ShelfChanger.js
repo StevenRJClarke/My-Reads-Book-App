@@ -2,18 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 class ShelfChanger extends React.Component {
-  state = {
-    // Store value in state
-    value: ''
-  }
-
-  // Change value state according to user input
-  changeValue = (newValue) => {
-    this.setState({
-      value: newValue
-    })
-  }
-
   render() {
     return (
       <div className="book-shelf-changer">
@@ -22,10 +10,9 @@ class ShelfChanger extends React.Component {
             and will change shelf otherwise in both <Book/> and App.js books state and server
           */}
         <select
-          value={this.state.value}
+          value={this.props.shelf}
           onChange={
             (event) => {
-              this.changeValue(event.target.value)
               this.props.addBook(event.target.value)
               this.props.changeShelf(event.target.value)
             }
