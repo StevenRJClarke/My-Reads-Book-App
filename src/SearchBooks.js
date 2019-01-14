@@ -72,7 +72,12 @@ class SearchBooks extends React.Component {
     foundBooks.forEach( (book) => {
       if(idOfStateBook.includes(book.id)) {
         indexOfMatch = idOfStateBook.indexOf(book.id)
+        // Set matched book's shelf to match
         book.shelf = this.props.books[indexOfMatch].shelf
+      }
+      // If book doesn't match, set shelf to 'none'
+      else {
+        book.shelf = 'none'
       }
     })
 
