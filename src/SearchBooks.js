@@ -12,6 +12,7 @@ class SearchBooks extends React.Component {
     // * error flag if no books found that match search
     query: '',
     searchedBooks: [],
+    shelvesDefined: false,
     searchError: false
   }
 
