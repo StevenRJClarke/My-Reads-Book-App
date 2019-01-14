@@ -81,9 +81,6 @@ class SearchBooks extends React.Component {
       }
     })
 
-    console.log(this.props.books)
-    console.log(foundBooks)
-
     return foundBooks
   }
 
