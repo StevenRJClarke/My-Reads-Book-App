@@ -63,6 +63,22 @@ class SearchBooks extends React.Component {
   // Check if any of the books returned by the search are already on the book
   // shelves. Ensure they have same shelf
   matchShelf(foundBooks) {
+    // Find id of books in App.js state
+    let idOfStateBook, indexOfMatch
+
+    idOfStateBook = this.props.books.map( (book) => book.id )
+
+    // Loop through each book in search, see if id matched book in books state
+    foundBooks.forEach( (book) => {
+      if(idOfStateBook.includes(book.id)) {
+        indexOfMatch = idOfStateBook.indexOf(book.id)
+        book.shelf = this.props.books[indexOfMatch].shelf
+      }
+    })
+
+    console.log(this.props.books)
+    console.log(foundBooks)
+
     return foundBooks
   }
 
