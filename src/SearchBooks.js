@@ -29,15 +29,15 @@ class SearchBooks extends React.Component {
     if(query.trim()) {
       BooksAPI.search(query.trim()).then( (foundBooks) => {
 
-          // Books returned by search must have same shelf as those on main page
-          foundBooks = this.matchShelf(foundBooks)
-
           if(!foundBooks.hasOwnProperty('error')) {
             // If books found, store book objects in state
             this.setState({
               searchedBooks: foundBooks,
               searchError: false
             })
+
+            // Books returned by search must have same shelf as those on main page
+            foundBooks = this.matchShelf(foundBooks)
           }
           // If no books found, no books are stored or shown
           else {
