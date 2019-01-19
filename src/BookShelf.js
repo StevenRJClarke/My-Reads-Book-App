@@ -6,7 +6,13 @@ class BookShelf extends React.Component {
   render() {
     return (
       <div className="bookshelf">
-        <h2 className="bookshelf-title">Currently Reading</h2>
+        <h2 className="bookshelf-title">{
+          (this.props.shelf === 'currentlyReading')
+          ? ('Currently Reading')
+          : (this.props.shelf === 'wantToRead' )
+            ? ('Want to Read')
+            : ('Read')
+        }</h2>
         <div className="bookshelf-books">
           <ol className="books-grid">
             {/* If shelf is Currently Reading, render the book here
