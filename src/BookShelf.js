@@ -15,8 +15,7 @@ class BookShelf extends React.Component {
         }</h2>
         <div className="bookshelf-books">
           <ol className="books-grid">
-            {/* If shelf is Currently Reading, render the book here
-                using <Book/> component
+            {/* Render books filtered by shelf as <Book/>
               */}
             {
               this.props.books
