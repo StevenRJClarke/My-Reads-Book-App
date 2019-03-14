@@ -2,6 +2,7 @@
   "name": "myreads-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://stevenrjclarke.github.io/My-Reads-Book-App",
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
